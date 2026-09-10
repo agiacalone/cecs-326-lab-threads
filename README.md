@@ -213,8 +213,8 @@ comments does not receive credit.
 
 | Component | Points | How |
 |---|--:|---|
-| Phase 0 · builds clean under `-Wall -Werror -pthread` | *gate* | automatic |
-| Phase 1 · the assembled map is byte-for-byte correct | 20 | automatic |
+| Phase 0 · builds clean under `-Wall -Werror -pthread` | 5 | automatic |
+| Phase 1 · the assembled map is byte-for-byte correct | 15 | automatic |
 | Phase 2 · seven runners genuinely overlap | 15 | automatic |
 | Phase 3 · the leaf count is exact across 50 runs | 10 | automatic |
 | Phase 4 · `WRITEUP.md` | 15 | instructor |
@@ -293,4 +293,4 @@ The scriptoria are re-seeded for grading, so the correct output is not the same
 bytes it was when you ran it. An answer file committed from somewhere else does
 not pass.
 
-<!-- serial: AE539CC5 -->
+<!-- serial: 54D62FCC -->
