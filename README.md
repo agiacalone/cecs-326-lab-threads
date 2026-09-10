@@ -48,14 +48,13 @@ That last one is where the trouble is.
 
 ## `[--[ PHASE 0 · THE GATE ]--]` *(5 points)*
 
-**Get a machine that can compile C.** You have three options, in order of how
+**Get a machine that can compile C.** You have two options, in order of how
 little can go wrong:
 
 | Option | How |
 |---|---|
 | **GitHub Codespaces** *(easiest)* | On this repository's page: **Code → Codespaces → Create codespace**. You get a Linux machine with `gcc` and `make` already on it, in your browser. Nothing to install. |
 | **Your own Linux** | A VM, WSL on Windows, or a Linux install. You need `gcc` and `make`: on Debian/Ubuntu, `sudo apt install build-essential`. |
-| **A campus lab machine** | The ECS lab machines have the toolchain. |
 
 > [!WARNING]
 > **macOS on Apple Silicon works, but is the option most likely to cost you an
@@ -294,4 +293,4 @@ The scriptoria are re-seeded for grading, so the correct output is not the same
 bytes it was when you ran it. An answer file committed from somewhere else does
 not pass.
 
-<!-- serial: ADB82152 -->
+<!-- serial: AE539CC5 -->
