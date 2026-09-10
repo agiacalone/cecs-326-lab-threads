@@ -1,0 +1,9 @@
+# Build output. Commit source, not binaries.
+fetch
+example
+warmup
+out.map
+*.o
+!lib/*.o
+solution/fetch_fixed
+solution/fetch_racy

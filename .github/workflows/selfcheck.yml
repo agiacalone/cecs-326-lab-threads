@@ -1,0 +1,25 @@
+# Student self-check. Advisory only: this is NOT the grader, and its result
+# does not appear in your grade. It runs the same checks ./selfcheck.sh runs,
+# on every push, so you find out that something is broken without having to
+# remember to look.
+name: Self-check
+on:
+  push:
+    branches: [main, master]
+    paths-ignore: ['**.md']
+  workflow_dispatch:
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  build-and-check:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+      - name: Build
+        run: make
+      - name: Self-check (20 runs)
+        run: ./selfcheck.sh 20
