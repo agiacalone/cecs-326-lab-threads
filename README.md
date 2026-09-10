@@ -171,8 +171,15 @@ When `./selfcheck.sh 50` passes cleanly, you are done with the code.
 
 ## `[--[ PHASE 4 · THE WRITEUP ]--]` *(15 points)*
 
-Create **`WRITEUP.md`** at the top of your repository. Answer three things, in
-your own words. A paragraph each is plenty. Code snippets are welcome.
+**`WRITEUP.md` is already in your repository.** Open it and answer the three
+questions, in your own words. A paragraph each is plenty. Code snippets are
+welcome.
+
+> [!IMPORTANT]
+> Fill in the **name** and **student ID** at the top of that file. This
+> repository is private, so those two lines are between you and me. They are
+> how your grade finds you: GitHub knows you as a username and Canvas knows you
+> as a student, and this is the only place the two meet.
 
 1. **The interleaving.** Walk through two runners calling `record_leaf()` at
    the same time and show, step by step, how one increment gets lost. "I added
@@ -201,7 +208,7 @@ the grader looks for them exactly.
 |---|---|
 | `fetch.c` | your program |
 | `Makefile` | unchanged, unless you had a good reason |
-| `WRITEUP.md` | at the top level of the repository |
+| `WRITEUP.md` | at the top level — **a stub is already there; fill in the name and student ID at the top** |
 
 Do not commit `fetch`, `out.map`, or any other build output. The `.gitignore`
 already handles this.
@@ -314,4 +321,4 @@ The scriptoria are re-seeded for grading, so the correct output is not the same
 bytes it was when you ran it. An answer file committed from somewhere else does
 not pass.
 
-<!-- serial: 4AC08504 -->
+<!-- serial: 5559644A -->
