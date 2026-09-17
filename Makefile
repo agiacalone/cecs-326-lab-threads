@@ -16,7 +16,7 @@ LDFLAGS = -pthread
 UNAME_S := $(shell uname -s)
 UNAME_M := $(shell uname -m)
 
-ifeq ($(UNAME_M),x86_64)
+ifeq ($(UNAME_S)-$(UNAME_M),Linux-x86_64)
 MIRROR = lib/mirror_x86_64.o
 else ifeq ($(UNAME_S)-$(UNAME_M),Linux-aarch64)
 MIRROR = lib/mirror_arm64_linux.o
@@ -24,6 +24,14 @@ else ifeq ($(UNAME_S)-$(UNAME_M),Darwin-arm64)
 MIRROR = lib/mirror_arm64_macos.o
 else
 $(error No scriptoria build for $(UNAME_S)/$(UNAME_M). Use the Codespace -- see the README.)
+endif
+
+# A supported platform can still be missing its object if the lab was packaged
+# wrong. Without this check, make reports "No rule to make target", which reads
+# like a mistake in your own code. It is not: it means the lab shipped
+# incomplete, and no amount of debugging fetch.c will fix it.
+ifeq ($(wildcard $(MIRROR)),)
+$(error Missing $(MIRROR) for $(UNAME_S)/$(UNAME_M). This is a packaging bug, not your code -- tell the instructor, and use the Codespace in the meantime)
 endif
 
 .PHONY: all check clean
