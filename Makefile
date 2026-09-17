@@ -10,7 +10,7 @@
 
 CC      = gcc
 CFLAGS  = -Wall -Werror -pthread -g
-LDFLAGS = -pthread -no-pie
+LDFLAGS = -pthread
 
 # Pick the scriptoria object file that matches this machine.
 UNAME_S := $(shell uname -s)
